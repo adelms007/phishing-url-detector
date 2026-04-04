@@ -16,7 +16,16 @@ y = phiusiil_phishing_url_website.data.targets
 
 X = X.drop(['URL','Domain','TLD','Title'],axis=1)
 
-X = X.drop(['URLSimilarityIndex'],axis=1)
+X = X.drop(['URLSimilarityIndex', "LineOfCode", 
+            "LargestLineLength", 
+            "NoOfPopup", 
+            "Robots" , "TLDLegitimateProb", 
+            "URLSimilarityIndex",   "DomainTitleMatchScore", 
+            "URLTitleMatchScore",  "Bank", 
+            "Pay", 
+            "Crypto", 
+            "HasSocialNet", 
+            "HasCopyrightInfo"],axis=1)
 
 X = X.astype(float)
 
